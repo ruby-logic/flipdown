@@ -25,4 +25,6 @@ gulp.task('default', () => {
   )
     .pipe(concat('flipdown.min.js'))
     .pipe(gulp.dest('dist'))
+    .pipe(rename('index.js'))
+    .pipe(gulp.dest('./'))
 })
