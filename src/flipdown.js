@@ -41,6 +41,7 @@ class FlipDown {
 
     // FlipDown DOM element
     this.element = document.getElementById(el)
+    this._addFlipdownClass()
 
     // Rotor DOM elements
     this.rotors = []
@@ -70,9 +71,6 @@ class FlipDown {
 
     // Set options
     this._setOptions()
-
-    // Print Version
-    console.log(`FlipDown ${this.version} (Theme: ${this.opts.theme})`)
   }
 
   /**
@@ -105,6 +103,12 @@ class FlipDown {
 
     // Chainable
     return this
+  }
+
+  _addFlipdownClass() {
+    if (!this.element.classList.contains('flipdown')) {
+      this.element.classList.add('flipdown')
+    }
   }
 
   /**
